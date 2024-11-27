@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picante FM - DjPolo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Figtree:wght@400&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="/css/djweb.css">
+</head>
+<body>
+
+    <%- include('partials/header') %>
+
+    <div class="container2">
+        <div class="left-column">
+            <div class="back">
+                <a href="#"><h3>&lt; Go back</h3></a>
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="account">
+                <div class="info">
+                <h3><%= djName %></h3>
+                <p class="hide">Hide</p>
+                <h2>Last Login</h2>
+                <p><%= lastLogin %></p>
+                </div>
+                <img src="/images/DJPolo.png">
+            </div>
+        </div>
+    </div>
+
+
+    <div id="playlists"></div>
+
+
+    <script src="js/djweb.js"></script>
+    <script>
+        window.onload = displayPlaylists;
+    </script>
+
+</body>
+</html>
